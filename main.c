@@ -93,13 +93,16 @@ void app_main(void)
     	accelz_aux = (((data[0] <<8)) | data[1]);
     	accelz = accelz_aux;
     	accelz = accelz/4096;
-    	Acc_module =sqrt(pow(accelx,2) + pow(accely,2) + pow(accelz,2));
+    	//Acc_module =sqrt(pow(accelx,2) + pow(accely,2) + pow(accelz,2));
 
-    	acc_serial=Acc_module;
+    	//acc_serial=Acc_module;
 
 
 
-		printf("Accelerazione = %f \n " ,acc_serial);
+		printf("Accelerazione x = %f \n " ,accelx);
+		printf("Accelerazione y = %f \n " ,accely);
+		printf("Accelerazione z = %f \n " ,accelz);
+
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
 	}
 
